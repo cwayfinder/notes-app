@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="submit(form.value)">
+    <mat-form-field>
+        <textarea matInput placeholder="Content" formControlName="content"></textarea>
+    </mat-form-field>
+    <input type="file" name="file" formControlName="file" (change)="changeFile($event.target.files[0])">
+
+    <button mat-raised-button color="primary" type="submit">Create</button>
+</form>
